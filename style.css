@@ -1,0 +1,135 @@
+/* Container */
+.rv-container {
+  padding: 20px;
+  background: #fff;
+}
+
+/* Title */
+.rv-container h2 {
+  font-size: 22px;
+  margin-bottom: 12px;
+}
+
+/* Wrapper */
+.rv-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+/* List (carousel) */
+.rv-list {
+  display: flex;
+  gap: 12px;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+  width: 100%;
+}
+
+.rv-list::-webkit-scrollbar {
+  display: none;
+}
+
+/* Card */
+.rv-card {
+  flex: 0 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; /* KEY FIX */
+  border: 1px solid #ddd;
+  padding: 10px;
+  background: #fff;
+  scroll-snap-align: start;
+  border-radius: 6px;
+  height: 100%;
+  min-height: 300px;
+}
+
+.rv-card:hover {
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+}
+
+/* Image */
+.rv-card img {
+  width: 100%;
+  height: 160px;         
+  object-fit: contain;    
+}
+
+/* Title */
+.rv-card p:first-of-type {
+  font-weight: bold;
+  cursor: pointer;
+  color: #007185;
+  margin: 6px 0;
+
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+/* Price */
+.rv-card p:nth-of-type(2) {
+  margin: 4px 0;
+}
+
+/* Button */
+.rv-card button {
+  margin-top: 6px;
+  padding: 6px;
+  width: 100%;
+  cursor: pointer;
+  background: #ffd814;
+  border: none;
+  border-radius: 4px;
+}
+
+/* Arrows */
+.rv-arrow {
+  position: absolute;
+  top: 40%;
+  transform: translateY(-50%);
+  background: white;
+  border: 1px solid #ccc;
+  cursor: pointer;
+  z-index: 2;
+  padding: 8px 12px;
+  font-size: 22px;
+  border-radius: 50%;
+}
+
+.rv-arrow.left {
+  left: -10px;
+}
+
+.rv-arrow.right {
+  right: -10px;
+}
+
+/* Mobile */
+.rv-card {
+  width: calc(50% - 10px);
+}
+
+/* Tablet */
+@media (min-width: 768px) {
+  .rv-card {
+    width: calc(33.33% - 10px);
+  }
+}
+
+/* Desktop */
+@media (min-width: 1440px) {
+  .rv-card {
+    width: calc(20% - 10px);
+  }
+}
+
+/* Hide arrows on mobile */
+@media (max-width: 600px) {
+  .rv-arrow {
+    display: none;
+  }
+}
