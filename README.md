@@ -52,3 +52,5 @@ Improves personalization and recommendation quality
 1. Install "User JavaScript and CSS" Chrome extension
 2. Add script.js and styles.css
 3. Open Amazon.in and test
+
+<img width="2738" height="738" alt="image" src="https://github.com/user-attachments/assets/b00db3d7-a82e-4cf1-b65d-bc837a81f91d" />
